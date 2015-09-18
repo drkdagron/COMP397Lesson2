@@ -17,12 +17,12 @@ function init(): void {
     canvas = document.getElementById("canvas"); //reference to index.html - canvas
     stage = new createjs.Stage(canvas);
     createjs.Ticker.setFPS(60);
-    createjs.Ticker.on("tick", update);
+    createjs.Ticker.on("tick", gameLoop);
 
     main();
 }
 
-function update(event: createjs.Event): void {
+function gameLoop(event: createjs.Event): void {
     stage.update(); //undates stage every tick
 }
 

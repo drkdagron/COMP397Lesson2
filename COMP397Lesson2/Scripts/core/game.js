@@ -13,10 +13,10 @@ function init() {
     canvas = document.getElementById("canvas"); //reference to index.html - canvas
     stage = new createjs.Stage(canvas);
     createjs.Ticker.setFPS(60);
-    createjs.Ticker.on("tick", update);
+    createjs.Ticker.on("tick", gameLoop);
     main();
 }
-function update(event) {
+function gameLoop(event) {
     stage.update(); //undates stage every tick
 }
 function main() {
@@ -27,4 +27,3 @@ function main() {
     helloLabel.y = 240;
     stage.addChild(helloLabel);
 }
-//# sourceMappingURL=game.js.map
